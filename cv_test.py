@@ -3,7 +3,7 @@ import numpy as np
 import csv
 import ast
 import sys
-from sift_template import cd_sift_ransac, cd_template_matching
+# from sift_template import cd_sift_ransac, cd_template_matching
 from color_segmentation import cd_color_segmentation
 
 # File paths
@@ -152,8 +152,9 @@ if __name__ == '__main__':
     elif len(sys.argv) == 3:
         scores = None
         algo_dict = dict({"color":cd_color_segmentation,
-                            "sift":cd_sift_ransac,
-                            "template":cd_template_matching})
+                            # "sift":cd_sift_ransac,
+                            # "template":cd_template_matching
+                            })
         data_dict = dict({"cone":(cone_csv_path, cone_template_path),
             "map":(localization_csv_path, localization_template_path),
             "citgo":(citgo_csv_path, citgo_template_path)})
